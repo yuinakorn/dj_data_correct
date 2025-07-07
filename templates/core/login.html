@@ -1,0 +1,188 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}เข้าสู่ระบบ - ระบบคืนข้อมูลสาธารณสุข{% endblock %}
+
+{% block content %}
+<div class="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-blue-50 py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-md w-full space-y-8">
+        <!-- Header -->
+        <div class="text-center">
+            <div class="mx-auto h-20 w-20 bg-blue-600 rounded-full flex items-center justify-center mb-6">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+            </div>
+            <h2 class="text-3xl font-bold text-slate-800 mb-2">เข้าสู่ระบบ</h2>
+            <p class="text-slate-600">ระบบคืนข้อมูลสาธารณสุข</p>
+        </div>
+
+        <!-- Login Card -->
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-8">
+            <!-- Provider ID Login Section -->
+            <div class="text-center mb-8">
+                <div class="mb-6">
+                    <div class="flex justify-center mb-4">
+                        <img src="{% static 'images/providerid.png' %}" 
+                             alt="Provider ID Logo" 
+                             class="h-16 w-auto object-contain">
+                    </div>
+                    <h3 class="text-xl font-semibold text-slate-800 mb-2">Provider ID Authentication</h3>
+                    <p class="text-slate-600 text-sm">เข้าสู่ระบบด้วย Digital ID กระทรวงสาธารณสุข</p>
+                </div>
+
+                <!-- Provider ID Login Button -->
+                <form method="post" id="providerid-form">
+                    {% csrf_token %}
+                    <input type="hidden" name="providerid_response" id="providerid_response" value="">
+                    
+                    <button type="button" 
+                            id="providerid-login-btn"
+                            class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-6 rounded-xl transition duration-300 transform hover:scale-105 shadow-sm flex items-center justify-center gap-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                        เข้าสู่ระบบด้วย Provider ID
+                    </button>
+                </form>
+            </div>
+
+            <!-- Demo Mode Toggle -->
+            <div class="border-t border-slate-200 pt-6">
+                <div class="text-center">
+                    <label class="flex items-center justify-center cursor-pointer">
+                        <input type="checkbox" id="demo-mode" class="toggle toggle-primary">
+                        <span class="ml-3 text-sm text-slate-600">โหมดทดสอบ (Demo Mode)</span>
+                    </label>
+                    <p class="text-xs text-slate-500 mt-2">เปิดโหมดทดสอบเพื่อจำลองการเข้าสู่ระบบ</p>
+                </div>
+            </div>
+
+            <!-- Demo Login Button (Hidden by default) -->
+            <div id="demo-login" class="hidden mt-6">
+                <button type="button" 
+                        id="demo-login-btn"
+                        class="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-4 rounded-lg transition duration-300 flex items-center justify-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                    เข้าสู่ระบบแบบทดสอบ
+                </button>
+            </div>
+        </div>
+
+        <!-- Information Section -->
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+            <h4 class="text-lg font-semibold text-slate-800 mb-3 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                ข้อมูลเพิ่มเติม
+            </h4>
+            <div class="space-y-2 text-sm text-slate-600">
+                <p>• ระบบใช้ Provider ID สำหรับการยืนยันตัวตน</p>
+                <p>• ข้อมูลส่วนตัวจะถูกเก็บรักษาอย่างปลอดภัย</p>
+                <p>• รองรับการเข้าถึงจากทุกอุปกรณ์</p>
+                <p>• หากมีปัญหา กรุณาติดต่อผู้ดูแลระบบ</p>
+            </div>
+        </div>
+
+        <!-- Back to Home -->
+        <div class="text-center">
+            <a href="{% url 'core:home' %}" class="text-blue-600 hover:text-blue-700 font-medium flex items-center justify-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                กลับไปหน้าแรก
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Loading Modal -->
+<div id="loading-modal" class="modal">
+    <div class="modal-box bg-white rounded-2xl shadow-xl">
+        <div class="text-center">
+            <div class="loading loading-spinner loading-lg text-blue-600 mb-4"></div>
+            <h3 class="text-lg font-semibold text-slate-800 mb-2">กำลังยืนยันตัวตน</h3>
+            <p class="text-slate-600">กรุณารอสักครู่ ระบบกำลังตรวจสอบข้อมูลกับ Provider ID</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const demoModeToggle = document.getElementById('demo-mode');
+    const demoLoginDiv = document.getElementById('demo-login');
+    const provideridLoginBtn = document.getElementById('providerid-login-btn');
+    const demoLoginBtn = document.getElementById('demo-login-btn');
+    const loadingModal = document.getElementById('loading-modal');
+    const provideridForm = document.getElementById('providerid-form');
+    const provideridResponseInput = document.getElementById('providerid_response');
+
+    // Toggle demo mode
+    demoModeToggle.addEventListener('change', function() {
+        if (this.checked) {
+            demoLoginDiv.classList.remove('hidden');
+            provideridLoginBtn.classList.add('opacity-50');
+        } else {
+            demoLoginDiv.classList.add('hidden');
+            provideridLoginBtn.classList.remove('opacity-50');
+        }
+    });
+
+    // Provider ID Login Button Click
+    provideridLoginBtn.addEventListener('click', function() {
+        if (demoModeToggle.checked) {
+            // Demo mode - simulate Provider ID login
+            simulateProviderIDLogin();
+        } else {
+            // Real Provider ID login
+            initiateProviderIDLogin();
+        }
+    });
+
+    // Demo Login Button Click
+    demoLoginBtn.addEventListener('click', function() {
+        simulateProviderIDLogin();
+    });
+
+    function simulateProviderIDLogin() {
+        // Show loading modal
+        loadingModal.classList.add('modal-open');
+        
+        // Simulate API call delay
+        setTimeout(() => {
+            // Generate demo token
+            const demoToken = 'demo_providerid_token_' + Date.now();
+            provideridResponseInput.value = demoToken;
+            
+            // Submit form
+            provideridForm.submit();
+        }, 2000);
+    }
+
+    function initiateProviderIDLogin() {
+        // Redirect to Provider ID OAuth
+        const clientId = '01947f9c-c00f-709f-9869-41b953301fc8';
+        const redirectUri = 'https://provider.chiangmaihealth.go.th/callback/';
+        const responseType = 'code';
+        const state = 'datacorrect|Yui456|localhost:8001/login';
+        
+        const oauthUrl = `https://moph.id.th/oauth/redirect?client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUri)}&response_type=${responseType}&state=${encodeURIComponent(state)}`;
+        
+        // Redirect to Provider ID
+        window.location.href = oauthUrl;
+    }
+
+    // Close modal when clicking outside
+    loadingModal.addEventListener('click', function(e) {
+        if (e.target === this) {
+            this.classList.remove('modal-open');
+        }
+    });
+});
+</script>
+{% endblock %} 

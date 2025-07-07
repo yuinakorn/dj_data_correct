@@ -1,0 +1,12 @@
+{
+  "name": "django-daisyui",
+  "version": "1.0.0",
+  "description": "Django with DaisyUI",
+  "scripts": {
+    "build": "tailwindcss -i ./static/src/input.css -o ./static/css/output.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0",
+    "daisyui": "^4.4.19"
+  }
+}

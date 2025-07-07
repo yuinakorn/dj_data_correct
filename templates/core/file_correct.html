@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}แก้ไขแฟ้มข้อมูล - ระบบคืนข้อมูลสาธารณสุข{% endblock %}
+
+{% block content %}
+<div class="max-w-7xl mx-auto">
+    <!-- Header -->
+    <div class="mb-8">
+        <div class="flex items-center justify-between">
+            <div>
+                <h1 class="text-3xl font-bold text-slate-800 mb-2">แก้ไขแฟ้มข้อมูล</h1>
+                <p class="text-slate-600">ระบบแก้ไขและปรับปรุงข้อมูลที่มีความผิดปกติ</p>
+            </div>
+            <div class="flex items-center gap-4">
+                <button class="btn btn-outline">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                    นำเข้าข้อมูล
+                </button>
+                <button class="btn btn-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                    </svg>
+                    เพิ่มข้อมูลใหม่
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content Placeholder -->
+    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-12">
+        <div class="text-center">
+            <div class="mx-auto w-32 h-32 bg-slate-100 rounded-full flex items-center justify-center mb-6">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+            </div>
+            <h2 class="text-2xl font-semibold text-slate-800 mb-4">หน้าแก้ไขแฟ้มข้อมูล</h2>
+            <p class="text-slate-600 mb-8 max-w-2xl mx-auto">
+                หน้านี้กำลังอยู่ระหว่างการพัฒนา จะใช้สำหรับการแก้ไขและปรับปรุงข้อมูลที่มีความผิดปกติ 
+                รวมถึงการจัดการแฟ้มข้อมูลต่างๆ ในระบบ
+            </p>
+            
+            <!-- Feature Preview Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-8">
+                <div class="p-6 bg-slate-50 rounded-xl border border-slate-200">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-slate-800 mb-2">แก้ไขข้อมูล</h3>
+                    <p class="text-sm text-slate-600">แก้ไขและปรับปรุงข้อมูลที่มีความผิดปกติในระบบ</p>
+                </div>
+                
+                <div class="p-6 bg-slate-50 rounded-xl border border-slate-200">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-slate-800 mb-2">วิเคราะห์ข้อมูล</h3>
+                    <p class="text-sm text-slate-600">วิเคราะห์และตรวจสอบความถูกต้องของข้อมูล</p>
+                </div>
+                
+                <div class="p-6 bg-slate-50 rounded-xl border border-slate-200">
+                    <div class="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-cyan-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4" />
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-slate-800 mb-2">ส่งออกข้อมูล</h3>
+                    <p class="text-sm text-slate-600">ส่งออกข้อมูลที่แก้ไขแล้วในรูปแบบต่างๆ</p>
+                </div>
+            </div>
+            
+            <!-- Coming Soon Section -->
+            <div class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-8 border border-blue-200">
+                <h3 class="text-xl font-semibold text-slate-800 mb-4">🚀 เร็วๆ นี้</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
+                    <div class="flex items-start gap-3">
+                        <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                        <div>
+                            <h4 class="font-medium text-slate-800">ระบบตรวจสอบอัตโนมัติ</h4>
+                            <p class="text-sm text-slate-600">ตรวจสอบความผิดปกติของข้อมูลด้วย AI</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                        <div>
+                            <h4 class="font-medium text-slate-800">การจัดการแฟ้มข้อมูล</h4>
+                            <p class="text-sm text-slate-600">อัปโหลดและจัดการแฟ้มข้อมูลหลายรูปแบบ</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="w-2 h-2 bg-cyan-500 rounded-full mt-2 flex-shrink-0"></div>
+                        <div>
+                            <h4 class="font-medium text-slate-800">ประวัติการแก้ไข</h4>
+                            <p class="text-sm text-slate-600">ติดตามการเปลี่ยนแปลงและประวัติการแก้ไข</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                        <div>
+                            <h4 class="font-medium text-slate-800">การแจ้งเตือน</h4>
+                            <p class="text-sm text-slate-600">ระบบแจ้งเตือนเมื่อพบข้อมูลผิดปกติ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 

@@ -1,0 +1,200 @@
+{% extends 'base.html' %}
+
+{% block title %}ระบบคืนข้อมูลสาธารณสุข - หน้าแรก{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<div class="hero min-h-[70vh] bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl shadow-sm">
+    <div class="hero-content text-center">
+        <div class="max-w-4xl">
+            <div class="mb-8">
+                <div class="w-24 h-24 mx-auto bg-blue-600 rounded-full flex items-center justify-center mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    </svg>
+                </div>
+            </div>
+            <h1 class="text-5xl font-bold text-slate-800 mb-6">ระบบคืนข้อมูลสาธารณสุข</h1>
+            <p class="py-6 text-xl text-slate-600 leading-relaxed">
+                ระบบจัดการและคืนข้อมูลด้านสาธารณสุขให้กับหน่วยงานในสังกัด<br>
+                เพื่อสนับสนุนการตัดสินใจและการวางแผนนโยบายด้านสุขภาพ
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+                <a href="#features" class="btn btn-primary btn-lg text-white bg-blue-600 hover:bg-blue-700 border-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                    เริ่มต้นใช้งาน
+                </a>
+                <a href="#about" class="btn btn-outline btn-lg text-slate-700 border-slate-300 hover:bg-slate-50">
+                    เรียนรู้เพิ่มเติม
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Statistics Section -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6 my-12">
+    <div class="stat bg-white rounded-xl shadow-sm border border-slate-200">
+        <div class="stat-figure text-blue-600">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+        </div>
+        <div class="stat-title text-slate-600">หน่วยงานที่ใช้ระบบ</div>
+        <div class="stat-value text-blue-600">156</div>
+        <div class="stat-desc text-slate-500">↗︎ เพิ่มขึ้น 14% จากเดือนที่แล้ว</div>
+    </div>
+    
+    <div class="stat bg-white rounded-xl shadow-sm border border-slate-200">
+        <div class="stat-figure text-purple-600">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+        </div>
+        <div class="stat-title text-slate-600">รายงานที่สร้าง</div>
+        <div class="stat-value text-purple-600">2,847</div>
+        <div class="stat-desc text-slate-500">↗︎ เพิ่มขึ้น 23% จากเดือนที่แล้ว</div>
+    </div>
+    
+    <div class="stat bg-white rounded-xl shadow-sm border border-slate-200">
+        <div class="stat-figure text-cyan-600">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+        </div>
+        <div class="stat-title text-slate-600">ความเร็วการประมวลผล</div>
+        <div class="stat-value text-cyan-600">99.9%</div>
+        <div class="stat-desc text-slate-500">↗︎ ระบบเสถียรภาพสูง</div>
+    </div>
+    
+    <div class="stat bg-white rounded-xl shadow-sm border border-slate-200">
+        <div class="stat-figure text-emerald-600">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+        </div>
+        <div class="stat-title text-slate-600">เวลาตอบสนอง</div>
+        <div class="stat-value text-emerald-600">< 2s</div>
+        <div class="stat-desc text-slate-500">↗︎ รวดเร็วและมีประสิทธิภาพ</div>
+    </div>
+</div>
+
+<!-- Features Section -->
+<div id="features" class="my-16">
+    <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-slate-800 mb-4">คุณสมบัติหลักของระบบ</h2>
+        <p class="text-lg text-slate-600 max-w-3xl mx-auto">
+            ระบบได้รับการออกแบบมาเพื่อตอบสนองความต้องการของหน่วยงานด้านสาธารณสุข 
+            ด้วยเทคโนโลยีที่ทันสมัยและความปลอดภัยระดับสูง
+        </p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Feature 1 -->
+        <div class="card bg-white shadow-sm border border-slate-200 hover:shadow-md transition-shadow duration-300">
+            <figure class="px-10 pt-10">
+                <div class="w-20 h-20 rounded-full bg-blue-100 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                </div>
+            </figure>
+            <div class="card-body items-center text-center">
+                <h3 class="card-title text-slate-800">ความปลอดภัยสูง</h3>
+                <p class="text-slate-600">ระบบรักษาความปลอดภัยข้อมูลด้วยการเข้ารหัสระดับสูง และการควบคุมการเข้าถึงที่เข้มงวด</p>
+            </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="card bg-white shadow-sm border border-slate-200 hover:shadow-md transition-shadow duration-300">
+            <figure class="px-10 pt-10">
+                <div class="w-20 h-20 rounded-full bg-purple-100 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                </div>
+            </figure>
+            <div class="card-body items-center text-center">
+                <h3 class="card-title text-slate-800">ประมวลผลเร็ว</h3>
+                <p class="text-slate-600">เทคโนโลยีการประมวลผลที่ทันสมัย ช่วยให้การดึงข้อมูลและสร้างรายงานเป็นไปอย่างรวดเร็ว</p>
+            </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="card bg-white shadow-sm border border-slate-200 hover:shadow-md transition-shadow duration-300">
+            <figure class="px-10 pt-10">
+                <div class="w-20 h-20 rounded-full bg-cyan-100 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-cyan-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    </svg>
+                </div>
+            </figure>
+            <div class="card-body items-center text-center">
+                <h3 class="card-title text-slate-800">รายงานครบถ้วน</h3>
+                <p class="text-slate-600">สร้างรายงานสถิติและกราฟิกที่ครบถ้วน เพื่อสนับสนุนการตัดสินใจและการวางแผน</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- About Section -->
+<div id="about" class="my-16 bg-gradient-to-r from-slate-50 to-blue-50 rounded-2xl p-8">
+    <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-slate-800 mb-6 text-center">เกี่ยวกับระบบ</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+                <h3 class="text-xl font-semibold text-slate-700 mb-4">วัตถุประสงค์</h3>
+                <p class="text-slate-600 leading-relaxed">
+                    ระบบคืนข้อมูลสาธารณสุขถูกพัฒนาขึ้นเพื่อให้หน่วยงานในสังกัดสามารถเข้าถึง 
+                    และวิเคราะห์ข้อมูลด้านสาธารณสุขได้อย่างมีประสิทธิภาพ 
+                    สนับสนุนการตัดสินใจและการวางแผนนโยบายด้านสุขภาพของประเทศ
+                </p>
+            </div>
+            <div>
+                <h3 class="text-xl font-semibold text-slate-700 mb-4">กลุ่มเป้าหมาย</h3>
+                <ul class="text-slate-600 space-y-2">
+                    <li class="flex items-center">
+                        <svg class="w-4 h-4 mr-2 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        โรงพยาบาลและสถานพยาบาล
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-4 h-4 mr-2 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        สำนักงานสาธารณสุขจังหวัด
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-4 h-4 mr-2 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        หน่วยงานวิจัยและพัฒนา
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-4 h-4 mr-2 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        ผู้บริหารและผู้กำหนดนโยบาย
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Contact Section -->
+<div class="alert alert-info shadow-sm my-8 bg-blue-50 border border-blue-200">
+    <div class="flex items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-blue-600 flex-shrink-0 w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        <div class="ml-4">
+            <span class="text-blue-800 font-medium">ข้อมูลระบบ</span>
+            <div class="text-blue-600 text-sm">อัปเดตล่าสุด: {% now "j F Y H:i" %} | เวอร์ชัน: 1.0.0</div>
+        </div>
+    </div>
+</div>
+{% endblock %}
